@@ -7,18 +7,6 @@ function ccd() {
     cd "$rootdir" || echo "ccd command from ~/.bashrc failed"
 }
 
-if [ -d "$HOME"/msft/dev/appcenter/dockercompose ]; then
-  for filename in "$HOME"/msft/dev/appcenter/dockercompose/*.ps1
-  do
-    cmd=$(basename "$filename" .ps1)
-
-    eval "a${cmd}() { $HOME/msft/dev/appcenter/dockercompose/${cmd}.ps1 diagnostics/docker \$@; }"
-    eval "c${cmd}() { $HOME/msft/dev/appcenter/dockercompose/${cmd}.ps1 crashes-docker \$@; }"
-    eval "cs${cmd}() { $HOME/msft/dev/appcenter/dockercompose/${cmd}.ps1 core-services/docker \$@; }"
-    eval "d${cmd}() { $HOME/msft/dev/appcenter/dockercompose/${cmd}.ps1 distribution/docker \$@; }"
-  done
-fi
-
 kcontext() {
   kubectl config view --minify
 }
@@ -73,10 +61,6 @@ function docker-force-clean() {
   docker-containers-clean
   docker-images-clean
 }
-
-
-
-
 
 # better bash history stuff
 shopt -s histappend
