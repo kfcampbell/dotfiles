@@ -3,8 +3,6 @@
 git config --global user.name "Keegan Campbell"
 git config --global user.email "kfcampbell@github.com"
 
-mkdir -p ~/.vim/colors
-cp ~/.dotfiles/.vim/colors/molokai.vim ~/.vim/colors/
 ln -s ~/.dotfiles/.bashrc ~/
 ln -s ~/.dotfiles/.vimrc ~/
 
