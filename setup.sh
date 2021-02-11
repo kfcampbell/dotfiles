@@ -7,9 +7,9 @@ ln -s ~/.dotfiles/.bashrc ~/
 ln -s ~/.dotfiles/.vimrc ~/
 
 # just in case?
-cp ~/.dotfiles/.bashrc ~/
-cp ~/.dotfiles/.vimrc ~/
+# cp ~/.dotfiles/.bashrc ~/
+# cp ~/.dotfiles/.vimrc ~/
 
 # try installing plugins
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +'PlugInstall --sync' +qall
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# vim +'PlugInstall --sync' +qall
